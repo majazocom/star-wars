@@ -1,10 +1,20 @@
 const url = 'https://swapi.dev/api/people';
 
 let characterList = (characters) => {
+
     characters.map(character => {
         console.log(character.name);
 
-        let li = document.createElement('article'); //<li></li>
+        let el = document.createElement('article'); //<article></article>
+
+        let elText = document.createTextNode(character.name); //Luke Skywalker
+
+        el.appendChild(elText); // <article>Luke Skywalker</article>
+
+        document.getElementById('characters').appendChild(el); 
+        // <section id="characters">
+        //     <article>Luke Skywalker</article>
+        // </section>
 
     })
 
