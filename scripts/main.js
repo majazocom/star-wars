@@ -1,8 +1,11 @@
 const url = 'https://swapi.dev/api/people';
 
 let characterList = (characters) => {
-    console.log(characters)
-    
+    characters.map(character => console.log(character.name))
+
+    // for (let i = 0; i < characters.length; i++) {
+    //     console.log(characters[i].name)
+    // }
 }
 
 let init = async () => {
@@ -10,10 +13,7 @@ let init = async () => {
     const data = await response.json();
 
 
-    console.log(data);
-
     //väntar på svar från vår fetch
-    console.log('nu har vår fetch blivit klar');
     characterList(data.results);
 }
 
