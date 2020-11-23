@@ -1,7 +1,12 @@
 const url = 'https://swapi.dev/api/people';
 
 let characterList = (characters) => {
-    characters.map(character => console.log(character.name))
+    characters.map(character => {
+        console.log(character.name);
+
+        let li = document.createElement('article'); //<li></li>
+
+    })
 
     // for (let i = 0; i < characters.length; i++) {
     //     console.log(characters[i].name)
